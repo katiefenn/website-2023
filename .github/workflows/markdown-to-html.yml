@@ -1,0 +1,10 @@
+name: Transform Markdown into HTML
+run-name: Transform Markdown into HTML
+on: [push]
+jobs:
+  Markdown-To-HTML:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install pandoc
+        run: sudo apt-get install -y pandoc
+
