@@ -5,6 +5,6 @@ jobs:
   Markdown-To-HTML:
     runs-on: ubuntu-latest
     steps:
-      - name: Install pandoc
+      - name: Install pandoc package
         run: sudo apt-get install -y pandoc
 
