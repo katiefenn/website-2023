@@ -1,0 +1,15 @@
+name: Build website
+run-name: Build static website
+on: [push]
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install pandoc package
+        run: sudo apt-get install -y pandoc
+      - name: Run make build
+        run: make build
+      - name: Debug build contents
+        run: ls -al build/2011-07-11-g4-cube-webserver/
